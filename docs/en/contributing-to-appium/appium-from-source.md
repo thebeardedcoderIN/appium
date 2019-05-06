@@ -9,7 +9,7 @@ request; for more information on how to run tests, keep reading!
 ### Node.js
 
 Appium is written in JavaScript, and run with the [Node.js](https://nodejs.org/) engine. Currently
-version 6+ is supported. While Node.js can be installed globally on the system,
+version 10+ is supported. While Node.js can be installed globally on the system,
 a version manager is _highly_ recommended.
 * NVM - [https://github.com/creationix/nvm](https://github.com/creationix/nvm)
 * N - [https://github.com/tj/n](https://github.com/tj/n)

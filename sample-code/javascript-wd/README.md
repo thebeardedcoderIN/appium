@@ -2,7 +2,7 @@
 
 ## Setup
 
-* Must have NodeJS (6+) and NPM installed (https://nodejs.org/en/)
+* Must have NodeJS (10+) and NPM installed (https://nodejs.org/en/)
 * Install dependencies by running `npm install`
 
 ## Running Tests

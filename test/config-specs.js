@@ -145,7 +145,7 @@ describe('Config', function () {
       describe('unsupported nodes', function () {
         const unsupportedVersions = [
           'v0.1', 'v0.9.12', 'v0.10.36', 'v0.12.14',
-          'v4.4.7', 'v5.7.0', 'v6.3.1', 'v7.1.1',
+          'v4.4.7', 'v5.7.0', 'v6.3.1', 'v7.1.1', 'v8.4.2',
         ];
         for (const version of unsupportedVersions) {
           it(`should fail if node is ${version}`, function () {
@@ -156,20 +156,16 @@ describe('Config', function () {
       });
 
       describe('supported nodes', function () {
-        it('should succeed if node is 8+', function () {
-          process.version = 'v8.1.2';
-          checkNodeOk.should.not.throw();
-        });
-        it('should succeed if node is 9+', function () {
-          process.version = 'v9.1.2';
-          checkNodeOk.should.not.throw();
-        });
         it('should succeed if node is 10+', function () {
           process.version = 'v10.0.1';
           checkNodeOk.should.not.throw();
         });
         it('should succeed if node is 11+', function () {
           process.version = 'v11.6.0';
+          checkNodeOk.should.not.throw();
+        });
+        it('should succeed if node is 12+', function () {
+          process.version = 'v12.4.0';
           checkNodeOk.should.not.throw();
         });
       });
@@ -183,13 +179,13 @@ describe('Config', function () {
       beforeEach(function () {
         spy.resetHistory();
       });
-      it('should not log a warning if node is 8+', function () {
-        process.version = 'v8.0.0';
+      it('should not log a warning if node is 10+', function () {
+        process.version = 'v10.0.0';
         warnNodeDeprecations();
         logger.warn.callCount.should.equal(0);
       });
-      it('should not log a warning if node is 9+', function () {
-        process.version = 'v9.0.0';
+      it('should not log a warning if node is 12+', function () {
+        process.version = 'v12.0.0';
         warnNodeDeprecations();
         logger.warn.callCount.should.equal(0);
       });

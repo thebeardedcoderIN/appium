@@ -22,7 +22,7 @@
     "url": "https://github.com/appium/appium/issues"
   },
   "engines": {
-    "node": ">=8",
+    "node": ">=10",
     "npm": ">=6"
   },
   "main": "./build/lib/main.js",
@@ -101,7 +101,7 @@
     "precommit-test"
   ],
   "devDependencies": {
-    "appium-gulp-plugins": "^3.6.0",
+    "appium-gulp-plugins": "^4.0.0",
     "chai": "4.x",
     "chai-as-promised": "7.x",
     "eslint-config-appium": "^4.0.1",
